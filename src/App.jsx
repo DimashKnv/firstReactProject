@@ -1,37 +1,50 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import gamesLogo from "./assets/games_icon.png";
+import shopLogo from "./assets/shop-icon.png";
+import settingsLogo from "./assets/settings_icon.png";
+
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="main_content">
+        <div className="left_content">
+          <div className="nav_bar">
+            <a href="">
+              <img src={gamesLogo} alt="games" />
+            </a>
+            <a href="">
+              <img src={shopLogo} alt="shop" />
+            </a>
+            <a href="">
+              <img src={settingsLogo} alt="" />
+            </a>
+          </div>
+          <div className="game_space">
+            <div className="game_card">
+              <img src="" alt="" />
+              <h3>name Game</h3>
+            </div>
+          </div>
+        </div>
+
+        <div className="right_content">
+          <h2>Comp_number</h2>
+          <h1>Login info</h1>
+          <div className="pack_info">
+            <h2>pack</h2>
+            <h2>time else</h2>
+            <img src="" alt="computerclub_logo" />
+          </div>
+
+          <button className="logout_but">Logout</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   );
 }
 
 export default App;
-
-
